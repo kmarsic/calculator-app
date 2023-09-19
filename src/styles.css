@@ -1,21 +1,84 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+:root {
+  --main-bg-color: hsl(222, 26%, 31%);
+  --keypad-background: hsl(223, 31%, 20%);
+  --screen-background: hsl(224, 36%, 15%);
+  --spec-key-background: hsl(225, 21%, 49%);
+  --spec-key-shadow: hsl(224, 28%, 35%);
+  --equal-key-background: hsl(6, 63%, 50%);
+  --equal-key-background-shadow: hsl(6, 70%, 34%);
+  --key-background: hsl(30, 25%, 89%);
+  --key-background-shadow:hsl(28, 16%, 65%);
+  --text: hsl(221, 14%, 31%);
+  --text-alternate: white;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+:root:has(#first:checked) {
+  --main-bg-color: hsl(222, 26%, 31%);
+  --keypad-background: hsl(223, 31%, 20%);
+  --screen-background: hsl(224, 36%, 15%);
+  --spec-key-background: hsl(225, 21%, 49%);
+  --spec-key-shadow: hsl(224, 28%, 35%);
+  --equal-key-background: hsl(6, 63%, 50%);
+  --equal-key-background-shadow: hsl(6, 70%, 34%);
+  --key-background: hsl(30, 25%, 89%);
+  --key-background-shadow:hsl(28, 16%, 65%);
+  --text: hsl(221, 14%, 31%);
+  --text-alternate: white;
+}
+
+:root:has(#second:checked) {
+  --main-bg-color: hsl(0, 0%, 90%);
+  --keypad-background: hsl(0, 5%, 81%);
+  --screen-background: hsl(0, 5%, 81%);
+  --spec-key-background: hsl(185, 42%, 37%);
+  --spec-key-shadow: hsl(185, 58%, 25%);
+  --equal-key-background: hsl(25, 98%, 40%);
+  --equal-key-background-shadow: hsl(25, 99%, 27%);
+  --key-background: hsl(45, 7%, 89%);
+  --key-background-shadow:hsl(35, 11%, 61%);
+  --text: hsl(60, 10%, 19%);
+  --text-alternate: hsl(60, 10%, 19%);
+}
+
+:root:has(#third:checked) {
+  --main-bg-color: hsl(268, 75%, 9%);
+  --keypad-background: hsl(268, 71%, 12%);
+  --screen-background: hsl(268, 71%, 12%);
+  --spec-key-background: hsl(281, 89%, 26%);
+  --spec-key-shadow: hsl(285, 91%, 52%);
+  --equal-key-background: hsl(176, 100%, 44%);
+  --equal-key-background-shadow: hsl(177, 92%, 70%);
+  --key-background: hsl(268, 47%, 21%);
+  --key-background-shadow:hsl(290, 70%, 36%);
+  --text: hsl(52, 100%, 62%);
+  --text-alternate: hsl(52, 100%, 62%);
+  --text-third: hsl(198, 20%, 13%);
+}
+:root:has(#third:checked) #selector {
+  background-color: var(--equal-key-background);
+}
+:root:has(#third:checked) .equals {
+  color: var(--text-third);
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(222, 26%, 31%);
+  background-color: var(--main-bg-color);
   font-family: "League Spartan";
   height: 98vh;
 }
 
 .container {
-  background-color: hsl(222, 26%, 31%);
+  background-color: var(--main-bg-color);
   width: 500px;
 }
 
@@ -23,9 +86,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--text-alternate);
 }
 .top-menu .name {
-  color: white;
+  color: var(--text-alternate);
   font-size: 2rem;
 }
 .top-menu .theme {
@@ -38,12 +102,12 @@ body {
   justify-content: space-evenly;
 }
 .top-menu .theme .switch-label label {
-  color: white;
+  color: var(--text-alternate);
   width: 2ch;
   padding: 0 0.325rem;
 }
 .top-menu .theme .switch-radios {
-  background-color: hsl(223, 31%, 20%);
+  background-color: var(--keypad-background);
   border-radius: 1rem;
   padding: 0.325rem;
   position: relative;
@@ -57,7 +121,7 @@ body {
   border-radius: 50%;
   top: 5px;
   position: absolute;
-  background-color: hsl(6, 63%, 50%);
+  background-color: var(--equal-key-background);
   z-index: 1000;
   transition: margin-left 0.3s ease-in-out;
 }
@@ -75,20 +139,20 @@ body {
 }
 
 .screen {
-  background-color: hsl(224, 36%, 15%);
+  background-color: var(--screen-background);
   height: 100px;
   border-radius: 0.5rem;
   margin: 1rem 0;
   display: flex;
   justify-content: right;
   align-items: center;
-  color: white;
+  color: var(--text-alternate);
   font-size: 3rem;
   padding: 2rem;
 }
 
 .button-container {
-  background-color: hsl(223, 31%, 20%);
+  background-color: var(--keypad-background);
   padding: 1rem;
   border-radius: 0.5rem;
   justify-content: center;
@@ -99,34 +163,34 @@ body {
 }
 
 .key {
-  background-color: hsl(30, 25%, 89%);
+  background-color: var(--key-background);
   font-size: 2rem;
   margin: 0.75rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  color: hsl(221, 14%, 31%);
-  border-bottom: 3px solid hsl(28, 16%, 65%);
+  color: var(--text);
+  border-bottom: 4px solid var(--key-background-shadow);
   cursor: pointer;
 }
 
 .del {
-  background-color: hsl(225, 21%, 49%);
-  border-bottom: 3px solid hsl(224, 28%, 35%);
+  background-color: var(--spec-key-background);
+  border-bottom: 3px solid var(--spec-key-shadow);
   color: white;
 }
 
 .reset {
-  background-color: hsl(225, 21%, 49%);
+  background-color: var(--spec-key-background);
   color: white;
   grid-column-start: 1;
-  border-bottom: 3px solid hsl(224, 28%, 35%);
+  border-bottom: 3px solid var(--spec-key-shadow);
   grid-column-end: 3;
 }
 
 .equals {
-  background-color: hsl(6, 63%, 50%);
+  background-color: var(--equal-key-background);
   color: white;
   grid-column-start: 3;
   grid-column-end: 5;
-  border-bottom: 3px solid hsl(6, 70%, 34%);
+  border-bottom: 3px solid var(--equal-key-background-shadow);
 }/*# sourceMappingURL=styles.css.map */

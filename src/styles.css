@@ -95,6 +95,7 @@ body {
 .top-menu .theme {
   display: flex;
   gap: 2rem;
+  cursor: default;
 }
 .top-menu .theme .switch-label {
   display: flex;
@@ -114,6 +115,7 @@ body {
 }
 .top-menu .theme .switch-radios input {
   opacity: 0;
+  cursor: default;
 }
 .top-menu .theme .switch-radios #selector {
   height: 20px;
@@ -139,16 +141,21 @@ body {
 }
 
 .screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 0.25rem;
   background-color: var(--screen-background);
   height: 100px;
   border-radius: 0.5rem;
-  margin: 1rem 0;
-  display: flex;
-  justify-content: right;
-  align-items: center;
+  margin: 1.5rem 0;
+  padding: 0 1.5rem;
   color: var(--text-alternate);
   font-size: 3rem;
-  padding: 2rem;
+}
+.screen .previous-operand {
+  font-size: 1.5rem;
 }
 
 .button-container {

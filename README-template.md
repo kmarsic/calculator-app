@@ -12,9 +12,8 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+
 
 ## Overview
 
@@ -29,11 +28,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](/screenshot_mobile.png)
+![](/screenshot_desktop_1.png)
+![](/screenshot_desktop_2.png)
+![](/screenshot_desktop_3.png)
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://kmarsic.github.io/advice-generator-app/](https://kmarsic.github.io/calculator-app/)
 
 ## My process
 
@@ -44,19 +46,18 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
+- Vanilla JS
 - Mobile-first workflow
 
 
 ### What I learned
 
+- In this challenge, I learned more about JS classes and how to use them properly. I also learned how to make a theme switcher, it was a challenge to figure out how to implement 3 different themes.
 
 ### Continued development
 
-
-### Useful resources
-
+- I hope to strenghten my knowledge of JS classes in the future and use them even more  effectively.
 ## Author
 
-- LinkedIn - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
--  - [@yourusername](https://www.twitter.com/yourusername)
+- LinkedIn - [Kristijan Maršić](https://www.linkedin.com/in/kmarsic/)
+- Frontend Mentor - [kmarsic](https://www.frontendmentor.io/profile/kmarsic)

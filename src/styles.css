@@ -89,7 +89,7 @@ body {
   align-items: center;
   background-color: var(--main-bg-color);
   font-family: "League Spartan";
-  height: 98vh;
+  height: 96vh;
 }
 
 .container {
@@ -235,4 +235,24 @@ body {
 }
 .equals:hover {
   background-color: var(--equal-key-hover);
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    width: 330px;
+    font-size: 12px;
+  }
+  .key {
+    font-size: 1rem;
+    margin: 0.25rem;
+  }
+  .del {
+    font-size: 1rem;
+  }
+  .reset {
+    font-size: 1rem;
+  }
+  .equals {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

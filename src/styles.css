@@ -5,10 +5,13 @@
   --screen-background: hsl(224, 36%, 15%);
   --spec-key-background: hsl(225, 21%, 49%);
   --spec-key-shadow: hsl(224, 28%, 35%);
+  --spec-key-hover: hsl(225, 39%, 66%);
   --equal-key-background: hsl(6, 63%, 50%);
   --equal-key-background-shadow: hsl(6, 70%, 34%);
+  --equal-key-hover: hsl(5, 62%, 61%);
   --key-background: hsl(30, 25%, 89%);
   --key-background-shadow:hsl(28, 16%, 65%);
+  --key-background-hover:white;
   --text: hsl(221, 14%, 31%);
   --text-alternate: white;
 }
@@ -25,10 +28,13 @@
   --screen-background: hsl(224, 36%, 15%);
   --spec-key-background: hsl(225, 21%, 49%);
   --spec-key-shadow: hsl(224, 28%, 35%);
+  --spec-key-hover: hsl(225, 39%, 66%);
   --equal-key-background: hsl(6, 63%, 50%);
   --equal-key-background-shadow: hsl(6, 70%, 34%);
+  --equal-key-hover: hsl(5, 62%, 61%);
   --key-background: hsl(30, 25%, 89%);
   --key-background-shadow:hsl(28, 16%, 65%);
+  --key-background-hover:white;
   --text: hsl(221, 14%, 31%);
   --text-alternate: white;
 }
@@ -39,10 +45,13 @@
   --screen-background: hsl(0, 5%, 81%);
   --spec-key-background: hsl(185, 42%, 37%);
   --spec-key-shadow: hsl(185, 58%, 25%);
+  --spec-key-hover: hsl(185, 36%, 53%);
   --equal-key-background: hsl(25, 98%, 40%);
   --equal-key-background-shadow: hsl(25, 99%, 27%);
+  --equal-key-hover: hsl(25, 92%, 60%);
   --key-background: hsl(45, 7%, 89%);
   --key-background-shadow:hsl(35, 11%, 61%);
+  --key-background-hover:white;
   --text: hsl(60, 10%, 19%);
   --text-alternate: hsl(60, 10%, 19%);
 }
@@ -53,16 +62,22 @@
   --screen-background: hsl(268, 71%, 12%);
   --spec-key-background: hsl(281, 89%, 26%);
   --spec-key-shadow: hsl(285, 91%, 52%);
+  --spec-key-hover:hsl(285, 44%, 45%);
   --equal-key-background: hsl(176, 100%, 44%);
   --equal-key-background-shadow: hsl(177, 92%, 70%);
+  --equal-key-hover: hsl(177, 92%, 70%);
   --key-background: hsl(268, 47%, 21%);
   --key-background-shadow:hsl(290, 70%, 36%);
+  --key-background-hover:rgb(124, 0, 181);
   --text: hsl(52, 100%, 62%);
   --text-alternate: hsl(52, 100%, 62%);
   --text-third: hsl(198, 20%, 13%);
 }
 :root:has(#third:checked) #selector {
   background-color: var(--equal-key-background);
+}
+:root:has(#third:checked) #selector:hover {
+  background-color: var(--equal-key-hover);
 }
 :root:has(#third:checked) .equals {
   color: var(--text-third);
@@ -95,7 +110,6 @@ body {
 .top-menu .theme {
   display: flex;
   gap: 2rem;
-  cursor: default;
 }
 .top-menu .theme .switch-label {
   display: flex;
@@ -106,16 +120,18 @@ body {
   color: var(--text-alternate);
   width: 2ch;
   padding: 0 0.325rem;
+  cursor: pointer;
 }
 .top-menu .theme .switch-radios {
   background-color: var(--keypad-background);
   border-radius: 1rem;
   padding: 0.325rem;
   position: relative;
+  cursor: pointer;
 }
 .top-menu .theme .switch-radios input {
   opacity: 0;
-  cursor: default;
+  cursor: pointer;
 }
 .top-menu .theme .switch-radios #selector {
   height: 20px;
@@ -126,6 +142,9 @@ body {
   background-color: var(--equal-key-background);
   z-index: 1000;
   transition: margin-left 0.3s ease-in-out;
+}
+.top-menu .theme .switch-radios #selector:hover {
+  background-color: var(--equal-key-hover);
 }
 
 .first {
@@ -138,6 +157,10 @@ body {
 
 .third {
   margin-left: 52px;
+}
+
+.small {
+  font-size: 1.5rem;
 }
 
 .screen {
@@ -179,11 +202,17 @@ body {
   border-bottom: 4px solid var(--key-background-shadow);
   cursor: pointer;
 }
+.key:hover {
+  background-color: var(--key-background-hover);
+}
 
 .del {
   background-color: var(--spec-key-background);
   border-bottom: 3px solid var(--spec-key-shadow);
   color: white;
+}
+.del:hover {
+  background-color: var(--spec-key-hover);
 }
 
 .reset {
@@ -193,6 +222,9 @@ body {
   border-bottom: 3px solid var(--spec-key-shadow);
   grid-column-end: 3;
 }
+.reset:hover {
+  background-color: var(--spec-key-hover);
+}
 
 .equals {
   background-color: var(--equal-key-background);
@@ -200,4 +232,7 @@ body {
   grid-column-start: 3;
   grid-column-end: 5;
   border-bottom: 3px solid var(--equal-key-background-shadow);
+}
+.equals:hover {
+  background-color: var(--equal-key-hover);
 }/*# sourceMappingURL=styles.css.map */

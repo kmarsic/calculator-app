@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://kmarsic.github.io/advice-generator-app/](https://kmarsic.github.io/calculator-app/)
+- Live Site URL: [https://kmarsic.github.io/calculator-app/](https://kmarsic.github.io/calculator-app/)
 
 ## My process
 

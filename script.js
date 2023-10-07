@@ -46,6 +46,7 @@ class Calculator {
     }
     appendNumber(number) {
         if (number === '.' && this.currentOperand.includes('.')) return;
+        if (this.currentOperand.toString().length >= 33) return;
         this.currentOperand = this.currentOperand.toString() + number.toString();
       }
     
